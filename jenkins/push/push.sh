@@ -5,28 +5,28 @@ echo "** Pushing image ***"
 echo "********************"
 
 echo "** Logging in ***"
-docker login -u phuongvo1992 -p $PASS
+docker login -u huyga12a1 -p $PASS
 
 case $@ in
   NodeJS)
     echo "*** Tagging image ***"
-    docker tag nodejsapp:$BUILD_TAG phuongvo1992/nodejsapp:latest
+    docker tag nodejsapp:$BUILD_TAG huyga12a1/nodejsapp:latest
     echo "*** Pushing image ***"
-    docker push phuongvo1992/nodejsapp:latest
+    docker push huyga12a1/nodejsapp:latest
     ;;
   Python)
     echo "*** Tagging image ***"
-    docker tag pythonapp:$BUILD_TAG phuongvo1992/pythonapp:latest
+    docker tag pythonapp:$BUILD_TAG huyga12a1/pythonapp:latest
     echo "*** Pushing image ***"
-    docker push phuongvo1992/pythonapp:latest
+    docker push huyga12a1/pythonapp:latest
     ;;
   All)
     echo "*** Tagging image ***"
-    docker tag nodejsapp:$BUILD_TAG phuongvo1992/nodejsapp:latest
-    docker tag pythonapp:$BUILD_TAG phuongvo1992/pythonapp:latest
+    docker tag nodejsapp:$BUILD_TAG huyga12a1/nodejsapp:latest
+    docker tag pythonapp:$BUILD_TAG huyga12a1/pythonapp:latest
     echo "*** Pushing image ***"
-    docker push phuongvo1992/nodejsapp:latest
-    docker push phuongvo1992/pythonapp:latest
+    docker push huyga12a1/nodejsapp:latest
+    docker push huyga12a1/pythonapp:latest
     ;;
   *)
     echo "Not push anything"  
